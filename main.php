@@ -77,6 +77,8 @@ $weatherData = file_get_contents($weatherAPI);
 $weatherData = json_decode($weatherData);
 $windSpeed = $weatherData->wind->speed;
 
+echo PHP_EOL;
+
 echo "Weather currently is " . $weatherData->weather[0]->description . "\n";
 echo "Temperature is: " . $weatherData->main->temp . " $selectedUnit->degrees\n";
 echo "Feels like: " . $weatherData->main->feels_like . " $selectedUnit->degrees\n";
